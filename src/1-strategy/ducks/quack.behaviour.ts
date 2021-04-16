@@ -1,5 +1,5 @@
 export interface QuackBehaviour {
-  quack: Function;
+  quack(): void;
 }
 
 export class Quack implements QuackBehaviour {

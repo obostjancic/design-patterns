@@ -1,9 +1,9 @@
 export interface Observer {
-  update: Function;
+  update(temperature: number, humidity: number, pressure: number): void;
 }
 
 export interface Observable {
-  registerObserver: Function;
-  removeObserver: Function;
-  notifyObservers: Function;
+  registerObserver(observer: Observer): void;
+  removeObserver(observer: Observer): void;
+  notifyObservers(): void;
 }

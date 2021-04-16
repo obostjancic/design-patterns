@@ -2,7 +2,7 @@ import { Observer, Observable } from './observer.interface';
 import { WeatherData } from './weather.data';
 
 export interface Display {
-  display: Function;
+  display(): void;
 }
 
 export class CurrentConditionsDisplay implements Observer, Display {

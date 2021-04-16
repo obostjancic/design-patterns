@@ -1,6 +1,6 @@
 // Strategy pattern - defines a family of interchangeable algorithms
 export interface FlyBehaviour {
-  fly: Function;
+  fly(): void;
 }
 
 export class FlyWithWings implements FlyBehaviour {

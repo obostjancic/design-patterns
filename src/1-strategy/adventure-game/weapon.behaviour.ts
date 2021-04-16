@@ -1,5 +1,5 @@
 export interface WeaponBehaviour {
-  useWeapon: Function;
+  useWeapon(): void;
 }
 
 export class AxeBehaviour implements WeaponBehaviour {
