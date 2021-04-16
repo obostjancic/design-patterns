@@ -26,12 +26,15 @@ export class Duck {
   public performQuack() {
     this.quackBehaviour.quack();
   }
+
   public performFly() {
     this.flyBehaviour.fly();
   }
+
   public swim() {
     console.log('swimming');
   }
+
   public display() {
     console.log('looks like a Duck');
   }
@@ -41,6 +44,7 @@ export class MallardDuck extends Duck {
   constructor() {
     super(new Quack(), new FlyWithWings());
   }
+
   public display() {
     console.log('looks like a MallardDuck');
   }
@@ -59,9 +63,11 @@ export class RubberDuck extends Duck {
   constructor() {
     super(new Squeak(), new FlyNoWay());
   }
+
   public quack() {
     console.log('squeaking');
   }
+
   public display() {
     console.log('looks like a RubberDuck');
   }
@@ -71,8 +77,11 @@ export class DecoyDuck extends Duck {
   constructor() {
     super(new MuteQuack(), new FlyNoWay());
   }
+
   public quack() {}
+
   public fly() {}
+
   public display() {
     console.log('looks like a DecoyDuck');
   }
@@ -82,8 +91,11 @@ export class ModelDuck extends Duck {
   constructor() {
     super(new Quack(), new FlyNoWay());
   }
+
   public quack() {}
+
   public fly() {}
+
   public display() {
     console.log('looks like a ModelDuck');
   }

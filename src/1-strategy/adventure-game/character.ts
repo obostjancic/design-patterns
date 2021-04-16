@@ -16,6 +16,7 @@ export class Character {
   public setWeapon(weapon: WeaponBehaviour) {
     this.weapon = weapon;
   }
+
   public fight() {
     this.weapon.useWeapon();
   }
