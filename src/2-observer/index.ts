@@ -1,6 +1,6 @@
-import { driver as weatherDriver } from "./weather";
+import { driver as weatherDriver } from './weather';
 
 export const driver = () => {
-  console.log("\nObserver\n");
+  console.log('\nObserver\n');
   weatherDriver();
 };

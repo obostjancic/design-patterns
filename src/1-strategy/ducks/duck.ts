@@ -1,5 +1,5 @@
-import { FlyBehaviour, FlyWithWings, FlyNoWay } from "./fly.behaviour";
-import { QuackBehaviour, Quack, Squeak, MuteQuack } from "./quack.behaviour";
+import { FlyBehaviour, FlyWithWings, FlyNoWay } from './fly.behaviour';
+import { QuackBehaviour, Quack, Squeak, MuteQuack } from './quack.behaviour';
 
 export class Duck {
   // Composition allows duck subclasses to be more flexible by combining
@@ -30,10 +30,10 @@ export class Duck {
     this.flyBehaviour.fly();
   }
   public swim() {
-    console.log("swimming");
+    console.log('swimming');
   }
   public display() {
-    console.log("looks like a Duck");
+    console.log('looks like a Duck');
   }
 }
 
@@ -42,7 +42,7 @@ export class MallardDuck extends Duck {
     super(new Quack(), new FlyWithWings());
   }
   public display() {
-    console.log("looks like a MallardDuck");
+    console.log('looks like a MallardDuck');
   }
 }
 
@@ -51,7 +51,7 @@ export class RedheadDuck extends Duck {
     super(new Quack(), new FlyWithWings());
   }
   public display() {
-    console.log("looks like a RedheadDuck");
+    console.log('looks like a RedheadDuck');
   }
 }
 
@@ -60,10 +60,10 @@ export class RubberDuck extends Duck {
     super(new Squeak(), new FlyNoWay());
   }
   public quack() {
-    console.log("squeaking");
+    console.log('squeaking');
   }
   public display() {
-    console.log("looks like a RubberDuck");
+    console.log('looks like a RubberDuck');
   }
 }
 
@@ -74,7 +74,7 @@ export class DecoyDuck extends Duck {
   public quack() {}
   public fly() {}
   public display() {
-    console.log("looks like a DecoyDuck");
+    console.log('looks like a DecoyDuck');
   }
 }
 
@@ -85,6 +85,6 @@ export class ModelDuck extends Duck {
   public quack() {}
   public fly() {}
   public display() {
-    console.log("looks like a ModelDuck");
+    console.log('looks like a ModelDuck');
   }
 }

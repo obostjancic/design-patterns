@@ -4,7 +4,7 @@ import {
   BowAndArrowBehaviour,
   AxeBehaviour,
   SwordBehaviour,
-} from "./weapon.behaviour";
+} from './weapon.behaviour';
 
 export class Character {
   private weapon: WeaponBehaviour;
@@ -24,27 +24,27 @@ export class Character {
 export class King extends Character {
   constructor() {
     super(new AxeBehaviour());
-    console.log("King");
+    console.log('King');
   }
 }
 
 export class Queen extends Character {
   constructor() {
     super(new BowAndArrowBehaviour());
-    console.log("Queen");
+    console.log('Queen');
   }
 }
 
 export class Knight extends Character {
   constructor() {
     super(new SwordBehaviour());
-    console.log("Knight");
+    console.log('Knight');
   }
 }
 
 export class Troll extends Character {
   constructor() {
     super(new KnifeBehaviour());
-    console.log("Troll");
+    console.log('Troll');
   }
 }

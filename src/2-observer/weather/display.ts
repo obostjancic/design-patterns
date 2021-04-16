@@ -1,5 +1,5 @@
-import { Observer, Observable } from "./observer.interface";
-import { WeatherData } from "./weather.data";
+import { Observer, Observable } from './observer.interface';
+import { WeatherData } from './weather.data';
 
 export interface Display {
   display: Function;
@@ -49,15 +49,20 @@ export class StatisticsDisplay implements Observer, Display {
 
   public display() {
     console.log(
-      `Statistics: Temp ${this.formatAvgMedian(this.temperatures, "˚C")}, humidity ${this.formatAvgMedian(
+      `Statistics: Temp ${this.formatAvgMedian(
+        this.temperatures,
+        '˚C'
+      )}, humidity ${this.formatAvgMedian(
         this.humidities,
-        "%"
-      )}, pressure ${this.formatAvgMedian(this.pressures, "mBar")}`
+        '%'
+      )}, pressure ${this.formatAvgMedian(this.pressures, 'mBar')}`
     );
   }
 
   private formatAvgMedian(values: number[], unit: string) {
-    return `avg: ${this.avg(values).toFixed(1)} ${unit}, median: ${this.median(values).toFixed(1)} ${unit}`;
+    return `avg: ${this.avg(values).toFixed(1)} ${unit}, median: ${this.median(
+      values
+    ).toFixed(1)} ${unit}`;
   }
 
   private avg(values: number[]) {
@@ -68,11 +73,17 @@ export class StatisticsDisplay implements Observer, Display {
     const arrSort = values.sort();
     const mid = Math.ceil(values.length / 2);
 
-    return values.length % 2 == 0 ? (arrSort[mid] + arrSort[mid - 1]) / 2 : arrSort[mid - 1];
+    return values.length % 2 == 0
+      ? (arrSort[mid] + arrSort[mid - 1]) / 2
+      : arrSort[mid - 1];
   }
 }
 export class ForecastDisplay implements Observer, Display {
-  private forecasts: string[] = ["More of the same", "Dont go out without sunglasses", "Bring an umbrella with you"];
+  private forecasts: string[] = [
+    'More of the same',
+    'Dont go out without sunglasses',
+    'Bring an umbrella with you',
+  ];
   private weatherData: Observable;
 
   constructor(data: WeatherData) {

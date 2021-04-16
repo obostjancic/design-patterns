@@ -1,4 +1,4 @@
-import { Observer, Observable } from "./observer.interface";
+import { Observer, Observable } from './observer.interface';
 
 // Observer pattern defines a one-to-many relationship between objects so
 // that when one object changes state, all its dependents are notified and
@@ -14,7 +14,11 @@ export class WeatherData implements Observable {
   private pressure: number;
   private observers: Observer[];
 
-  constructor(temperature: number = 0, humidity: number = 0, pressure: number = 0) {
+  constructor(
+    temperature: number = 0,
+    humidity: number = 0,
+    pressure: number = 0
+  ) {
     this.temperature = temperature;
     this.humidity = humidity;
     this.pressure = pressure;
@@ -27,20 +31,26 @@ export class WeatherData implements Observable {
   }
 
   public removeObserver(observer: Observer) {
-    this.observers = this.observers.filter(o => o !== observer);
+    this.observers = this.observers.filter((o) => o !== observer);
   }
 
   // When the state of one object (Observable) changes, all of its dependents (Observers)
   // are notified.
   public notifyObservers() {
-    this.observers.forEach(o => o.update(this.temperature, this.humidity, this.pressure));
+    this.observers.forEach((o) =>
+      o.update(this.temperature, this.humidity, this.pressure)
+    );
   }
 
   public measurementsChanged() {
     this.notifyObservers();
   }
 
-  public setMeasurements(temperature: number, humidity: number, pressure: number) {
+  public setMeasurements(
+    temperature: number,
+    humidity: number,
+    pressure: number
+  ) {
     this.temperature = temperature;
     this.humidity = humidity;
     this.pressure = pressure;

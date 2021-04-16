@@ -5,7 +5,7 @@ export interface FlyBehaviour {
 
 export class FlyWithWings implements FlyBehaviour {
   public fly() {
-    console.log("flapping wings");
+    console.log('flapping wings');
   }
 }
 
@@ -17,6 +17,6 @@ export class FlyNoWay implements FlyBehaviour {
 
 export class FlyRocketPowered implements FlyBehaviour {
   public fly() {
-    console.log("flying with a rocket");
+    console.log('flying with a rocket');
   }
 }

@@ -1,11 +1,11 @@
-import { Character, King, Queen, Troll, Knight } from "./character";
-import { AxeBehaviour } from "./weapon.behaviour";
+import { Character, King, Queen, Troll, Knight } from './character';
+import { AxeBehaviour } from './weapon.behaviour';
 
-const separator = () => console.log("==========================");
+const separator = () => console.log('==========================');
 
 export const driver = () => {
   separator();
-  console.log("Adventure game");
+  console.log('Adventure game');
   separator();
 
   const king: Character = new King();

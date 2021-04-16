@@ -1,7 +1,13 @@
-import { WeatherData } from "./weather.data";
-import { CurrentConditionsDisplay, ForecastDisplay, StatisticsDisplay, HeatIndexDisplay, Display } from "./display";
+import { WeatherData } from './weather.data';
+import {
+  CurrentConditionsDisplay,
+  ForecastDisplay,
+  StatisticsDisplay,
+  HeatIndexDisplay,
+  Display,
+} from './display';
 
-const separator = () => console.log("==========================");
+const separator = () => console.log('==========================');
 
 export const driver = () => {
   const data: WeatherData = new WeatherData();

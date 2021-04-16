@@ -4,24 +4,24 @@ export interface WeaponBehaviour {
 
 export class AxeBehaviour implements WeaponBehaviour {
   public useWeapon() {
-    console.log("Axe slash");
+    console.log('Axe slash');
   }
 }
 
 export class KnifeBehaviour implements WeaponBehaviour {
   public useWeapon() {
-    console.log("Knife cut");
+    console.log('Knife cut');
   }
 }
 
 export class BowAndArrowBehaviour implements WeaponBehaviour {
   public useWeapon() {
-    console.log("Arrow shot");
+    console.log('Arrow shot');
   }
 }
 
 export class SwordBehaviour implements WeaponBehaviour {
   public useWeapon() {
-    console.log("Sword stab");
+    console.log('Sword stab');
   }
 }

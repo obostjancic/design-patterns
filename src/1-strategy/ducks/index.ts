@@ -1,11 +1,18 @@
-import { Duck, MallardDuck, RedheadDuck, RubberDuck, DecoyDuck, ModelDuck } from "./duck";
-import { FlyRocketPowered } from "./fly.behaviour";
+import {
+  Duck,
+  MallardDuck,
+  RedheadDuck,
+  RubberDuck,
+  DecoyDuck,
+  ModelDuck,
+} from './duck';
+import { FlyRocketPowered } from './fly.behaviour';
 
-const separator = () => console.log("==========================");
+const separator = () => console.log('==========================');
 
 export const driver = () => {
   separator();
-  console.log("Ducks");
+  console.log('Ducks');
   separator();
 
   const mallard: Duck = new MallardDuck();
