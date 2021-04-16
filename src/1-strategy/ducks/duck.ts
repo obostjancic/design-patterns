@@ -1,11 +1,8 @@
 import { FlyBehaviour, FlyWithWings, FlyNoWay } from "./fly.behaviour";
 import { QuackBehaviour, Quack, Squeak, MuteQuack } from "./quack.behaviour";
 
-// Favour composition over inheritance
-// Encapsulate what varies
-// Program to interfaces, not implementations
 export class Duck {
-  // composition allows duck subclasses to be more flexible by combining
+  // Composition allows duck subclasses to be more flexible by combining
   // different behaviours.
   // Specific behaviours are completely encapsulated since these are
   // interfaces
