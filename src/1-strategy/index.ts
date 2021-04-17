@@ -1,9 +1,9 @@
-import ducks from './ducks';
+import simUDuck from './simuduck';
 import adventureGame from './adventure-game';
 
 const driver = () => {
   console.log('\nStrategy\n');
-  ducks();
+  simUDuck();
   adventureGame();
 };
 
