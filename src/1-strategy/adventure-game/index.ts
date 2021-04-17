@@ -3,7 +3,7 @@ import { AxeBehaviour } from './weapon.behaviour';
 
 const separator = () => console.log('==========================');
 
-export const driver = () => {
+const driver = () => {
   const king: Character = new King();
   king.fight();
 
@@ -26,3 +26,5 @@ export const driver = () => {
 
   separator();
 };
+
+export default driver;

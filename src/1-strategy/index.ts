@@ -1,8 +1,10 @@
-import { driver as duckDriver } from './ducks';
-import { driver as adventureGameDriver } from './adventure-game';
+import ducks from './ducks';
+import adventureGame from './adventure-game';
 
-export const driver = () => {
+const driver = () => {
   console.log('\nStrategy\n');
-  duckDriver();
-  adventureGameDriver();
+  ducks();
+  adventureGame();
 };
+
+export default driver;

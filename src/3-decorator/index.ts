@@ -1,5 +1,7 @@
-import { driver as starbuzzDriver } from './starbuzz';
+import starbuzz from './starbuzz';
 
-export const driver = () => {
-  starbuzzDriver();
+const driver = () => {
+  starbuzz();
 };
+
+export default driver;
