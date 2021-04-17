@@ -4,10 +4,6 @@ import { AxeBehaviour } from './weapon.behaviour';
 const separator = () => console.log('==========================');
 
 export const driver = () => {
-  separator();
-  console.log('Adventure game');
-  separator();
-
   const king: Character = new King();
   king.fight();
 

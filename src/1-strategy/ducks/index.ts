@@ -11,10 +11,6 @@ import { FlyRocketPowered } from './fly.behaviour';
 const separator = () => console.log('==========================');
 
 export const driver = () => {
-  separator();
-  console.log('Ducks');
-  separator();
-
   const mallard: Duck = new MallardDuck();
   mallard.display();
   mallard.performQuack();

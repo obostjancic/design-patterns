@@ -1,21 +1,20 @@
-import { WeatherData } from './weather.data';
 import {
   CurrentConditionsDisplay,
   ForecastDisplay,
-  StatisticsDisplay,
   HeatIndexDisplay,
-  Display,
+  StatisticsDisplay,
 } from './display';
+import { WeatherData } from './weather.data';
 
 const separator = () => console.log('==========================');
 
 export const driver = () => {
   const data: WeatherData = new WeatherData();
 
-  const currentDisplay: Display = new CurrentConditionsDisplay(data);
-  const statisticsDisplay: Display = new StatisticsDisplay(data);
-  const forecastDisplay: Display = new ForecastDisplay(data);
-  const heatIndexDisplay: Display = new HeatIndexDisplay(data);
+  new CurrentConditionsDisplay(data);
+  new StatisticsDisplay(data);
+  new ForecastDisplay(data);
+  new HeatIndexDisplay(data);
 
   separator();
   data.setMeasurements(27, 86, 997);

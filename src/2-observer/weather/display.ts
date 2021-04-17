@@ -6,9 +6,9 @@ export interface Display {
 }
 
 export class CurrentConditionsDisplay implements Observer, Display {
-  private temperature: number = 0;
-  private humidity: number = 0;
-  private pressure: number = 0;
+  private temperature = 0;
+  private humidity = 0;
+  private pressure = 0;
   private weatherData: Observable;
 
   constructor(data: WeatherData) {
@@ -91,7 +91,7 @@ export class ForecastDisplay implements Observer, Display {
     this.weatherData.registerObserver(this);
   }
 
-  public update(temperature: number, humidity: number, pressure: number) {
+  public update() {
     this.display();
   }
 
@@ -111,8 +111,8 @@ export class ForecastDisplay implements Observer, Display {
 }
 
 export class HeatIndexDisplay implements Observer, Display {
-  private temperature: number = 0;
-  private humidity: number = 0;
+  private temperature = 0;
+  private humidity = 0;
   private weatherData: Observable;
 
   constructor(data: WeatherData) {
@@ -120,7 +120,7 @@ export class HeatIndexDisplay implements Observer, Display {
     this.weatherData.registerObserver(this);
   }
 
-  public update(temperature: number, humidity: number, pressure: number) {
+  public update(temperature: number, humidity: number) {
     this.temperature = temperature;
     this.humidity = humidity;
     this.display();

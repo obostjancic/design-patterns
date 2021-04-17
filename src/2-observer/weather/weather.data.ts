@@ -14,11 +14,7 @@ export class WeatherData implements Observable {
   private pressure: number;
   private observers: Observer[];
 
-  constructor(
-    temperature: number = 0,
-    humidity: number = 0,
-    pressure: number = 0
-  ) {
+  constructor(temperature = 0, humidity = 0, pressure = 0) {
     this.temperature = temperature;
     this.humidity = humidity;
     this.pressure = pressure;
