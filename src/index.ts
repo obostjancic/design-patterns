@@ -2,7 +2,8 @@
 // import observer from './2-observer';
 // import decorator from './3-decorator';
 // import factory from './4-factory';
-import singleton from './5-singleton';
+// import singleton from './5-singleton';
+import command from './6-command';
 
 // Favour composition over inheritance
 // Encapsulate what varies
@@ -14,4 +15,5 @@ import singleton from './5-singleton';
 // observer();
 // decorator();
 // factory();
-singleton();
+// singleton();
+command();
