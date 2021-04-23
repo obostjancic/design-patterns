@@ -4,14 +4,15 @@
 // import factory from './4-factory';
 // import singleton from './5-singleton';
 // import command from './6-command';
-import adapterFacade from './7-adapter-and-facade';
+// import adapterFacade from './7-adapter-and-facade';
+import template from './8-template';
 
 // Favour composition over inheritance
 // Encapsulate what varies
 // Program to interfaces, not implementations
 // Strive for loosely coubled designs between objects that interact
 // Depend on abstractions. Do not deppend on concrete classes
-// Talk nly to your friends.
+// Talk only to your friends.
 
 // strategy();
 // observer();
@@ -19,4 +20,5 @@ import adapterFacade from './7-adapter-and-facade';
 // factory();
 // singleton();
 // command();
-adapterFacade();
+// adapterFacade();
+template();

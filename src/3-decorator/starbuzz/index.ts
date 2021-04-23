@@ -15,7 +15,7 @@ const round = (val: number) => parseFloat(val.toFixed(2));
 const printBeverageInfo = (beverage: Beverage) =>
   console.log(`${beverage.getDescription()}, ${round(beverage.cost())}$`);
 
-const driver = () => {
+export default () => {
   const espresso: Beverage = new Espresso();
   printBeverageInfo(espresso);
   separator();
@@ -46,5 +46,3 @@ const driver = () => {
   printBeverageInfo(grandeDecafWhipped);
   separator();
 };
-
-export default driver;

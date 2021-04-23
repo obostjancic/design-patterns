@@ -8,7 +8,7 @@ import { WeatherData } from './weather.data';
 
 const separator = () => console.log('==========================');
 
-const driver = () => {
+export default () => {
   const data: WeatherData = new WeatherData();
 
   new CurrentConditionsDisplay(data);
@@ -24,5 +24,3 @@ const driver = () => {
   data.setMeasurements(31, 78, 1007);
   separator();
 };
-
-export default driver;

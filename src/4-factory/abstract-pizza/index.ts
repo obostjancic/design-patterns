@@ -2,7 +2,7 @@ import { NYPizzaStore, PizzaStore, ChicagoPizzaStore } from './pizza.store';
 
 const separator = () => console.log('==========================');
 
-const driver = () => {
+export default () => {
   const nyStore: PizzaStore = new NYPizzaStore();
   const chicagoStore: PizzaStore = new ChicagoPizzaStore();
 
@@ -11,5 +11,3 @@ const driver = () => {
   separator();
   chicagoStore.orderPizza('pepperoni');
 };
-
-export default driver;

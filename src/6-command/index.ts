@@ -1,8 +1,6 @@
 import automationOrBust from './automation-or-bust';
 
-const driver = () => {
+export default () => {
   console.log('\nCommand\n');
   automationOrBust();
 };
-
-export default driver;

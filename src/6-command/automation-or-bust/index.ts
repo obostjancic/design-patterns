@@ -19,7 +19,7 @@ const separator = () => console.log('==========================');
 // Command pattern encapsulates a request as an object, thereby letting
 // parametrize clients with different requests, queue or log requests, and
 // support undoable operations.
-const driver = () => {
+export default () => {
   const remote: RemoteControl = new RemoteControl();
 
   const kitchenlight = new Light('kitchen');
@@ -90,5 +90,3 @@ const driver = () => {
   remote.onButtonPressed(6);
   remote.undoButtonPressed();
 };
-
-export default driver;

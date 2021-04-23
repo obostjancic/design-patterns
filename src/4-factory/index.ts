@@ -3,10 +3,8 @@ import abstractPizza from './abstract-pizza';
 
 // Among other differences: Simple factory relies on inheritance while
 // abstract factory relies on composition
-const driver = () => {
+export default () => {
   console.log('\nFactory\n');
   simplePizza();
   abstractPizza();
 };
-
-export default driver;

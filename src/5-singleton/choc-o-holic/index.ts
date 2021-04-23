@@ -1,6 +1,6 @@
 import { ChocolateBoiler } from './chocolate.boiler';
 
-const driver = () => {
+export default () => {
   const boiler1 = ChocolateBoiler.getBoiler();
   const boiler2 = ChocolateBoiler.getBoiler();
 
@@ -12,5 +12,3 @@ const driver = () => {
   boiler1.drain();
   boiler2.printState();
 };
-
-export default driver;

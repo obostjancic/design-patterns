@@ -1,8 +1,6 @@
 import weatherORama from './weather-o-rama';
 
-const driver = () => {
+export default () => {
   console.log('\nObserver\n');
   weatherORama();
 };
-
-export default driver;

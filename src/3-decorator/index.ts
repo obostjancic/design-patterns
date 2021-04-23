@@ -1,8 +1,6 @@
 import starbuzz from './starbuzz';
 
-const driver = () => {
+export default () => {
   console.log('\nDecorator\n');
   starbuzz();
 };
-
-export default driver;
