@@ -6,8 +6,11 @@
 // import command from './6-command';
 // import adapterFacade from './7-adapter-and-facade';
 // import template from './8-template';
-import iteratorComposite from './9-iterator-and-composite';
+// import iteratorComposite from './9-iterator-and-composite';
+import state from './10-state';
 
+// OO design principles
+// ===================================
 // Favour composition over inheritance
 // Encapsulate what varies
 // Program to interfaces, not implementations
@@ -25,4 +28,5 @@ import iteratorComposite from './9-iterator-and-composite';
 // command();
 // adapterFacade();
 // template();
-iteratorComposite();
+// iteratorComposite();
+state();
