@@ -1,5 +1,5 @@
-import dinerIterator from './diner-iterator';
-import dinerComposite from './diner-composite';
+import dinerIterator from './iterator';
+import dinerComposite from './composite';
 
 const separator = () => console.log('\n==========================\n');
 

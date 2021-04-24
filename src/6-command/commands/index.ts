@@ -31,3 +31,4 @@ export {
   StereoOffCommand,
   StereoOnWithCdCommand,
 } from './stereo.command';
+export { MacroCommand } from './macro.command';
