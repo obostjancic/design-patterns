@@ -19,4 +19,8 @@ export class Flock extends AbstractQuackable {
       q.quack();
     });
   }
+
+  public name() {
+    return this.quackers.map((q) => q.name()).join(' ');
+  }
 }

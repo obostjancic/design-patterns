@@ -2,7 +2,7 @@ import { AbstractQuackable } from '../quackable';
 
 export class Goose {
   public honk() {
-    console.log('Honk');
+    console.log('Goose Honks');
   }
 }
 
@@ -16,5 +16,9 @@ export class GooseAdapter extends AbstractQuackable {
 
   public quack() {
     this.goose.honk();
+  }
+
+  public name() {
+    return 'Goose';
   }
 }

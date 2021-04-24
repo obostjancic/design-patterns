@@ -20,5 +20,6 @@ export abstract class AbstractQuackable implements Quackable {
     this.observable.notify();
   }
 
+  abstract name(): string;
   abstract quack(): void;
 }

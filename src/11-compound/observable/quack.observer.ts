@@ -5,7 +5,7 @@ export interface Observer {
 }
 
 export class Quackologist implements Observer {
-  update(_: QuackObservable) {
-    console.log(`Quackologist: A duck just quacked`);
+  update(duck: QuackObservable) {
+    console.log(`Quackologist: A ${duck.name()} just quacked`);
   }
 }

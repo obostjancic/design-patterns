@@ -3,6 +3,7 @@ import { Observer } from './quack.observer';
 export interface QuackObservable {
   register(observer: Observer): void;
   notify(): void;
+  name(): string;
 }
 
 export class Observable implements QuackObservable {
@@ -21,5 +22,9 @@ export class Observable implements QuackObservable {
     this.observers.forEach((o) => {
       o.update(this.duck);
     });
+  }
+
+  public name() {
+    return 'Observable';
   }
 }

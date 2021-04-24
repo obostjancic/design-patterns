@@ -27,4 +27,8 @@ export class QuackCounter extends AbstractQuackable {
   public notify() {
     this.duck.notify();
   }
+
+  public name() {
+    return this.duck.name();
+  }
 }
