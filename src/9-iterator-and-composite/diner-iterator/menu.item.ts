@@ -33,6 +33,8 @@ export class MenuItem {
   }
 
   public toString() {
-    return `${this.getName()}, ${this.getDescription()}, ${this.getPrice()}`;
+    return `${this.getName()} ${
+      this.isVegetarian() ? '(v)' : ''
+    }, ${this.getPrice()}  --  ${this.getDescription()}`;
   }
 }

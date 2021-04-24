@@ -1,11 +1,20 @@
 import { MenuItem } from './menu.item';
-import { Iterator, PancakeMenuIterator, DinerMenuIterator } from './iterator';
+import {
+  Iterator,
+  PancakeMenuIterator,
+  DinerMenuIterator,
+  CafeMenuIterator,
+} from './iterator';
 
 export interface Menu {
+  name: string;
+  description: string;
   createIterator(): Iterator<MenuItem>;
 }
 
 export class PancakeHouseMenu implements Menu {
+  name: string = 'PANCAKE HOUSE MENU';
+  description: string = 'Breakfast';
   private menuItems: MenuItem[];
 
   constructor() {
@@ -48,6 +57,8 @@ export class PancakeHouseMenu implements Menu {
 }
 
 export class DinerMenu implements Menu {
+  name: string = 'DINER MENU';
+  description: string = 'Lunch';
   private menuItems: Set<MenuItem> = new Set();
 
   constructor() {
@@ -67,7 +78,7 @@ export class DinerMenu implements Menu {
 
     this.addItem(
       `Soup of the day`,
-      'Soub of the day, with a side of potato salad',
+      'Soup of the day, with a side of potato salad',
       false,
       3.29
     );
@@ -84,5 +95,50 @@ export class DinerMenu implements Menu {
 
   public createIterator(): Iterator<MenuItem> {
     return new DinerMenuIterator(this.menuItems);
+  }
+}
+
+export class CafeMenu implements Menu {
+  name: string = 'CAFE MENU';
+  description: string = 'Dinner';
+  private menuItems: Map<string, MenuItem> = new Map();
+
+  constructor() {
+    this.addItem(
+      `Veggie burger and Air Fries`,
+      'Veggie burger on a whole wheat bun. lettuce, tomato and fries',
+      true,
+      3.99
+    );
+
+    this.addItem(
+      `Soup of the day`,
+      'Soup of the day, with a side of potato salad',
+      false,
+      3.69
+    );
+
+    this.addItem(
+      `Burrito`,
+      'A large burrito, with whole pinto beans, salsa, guacamole',
+      true,
+      4.29
+    );
+  }
+
+  public addItem(
+    name: string,
+    description: string,
+    vegetarian: boolean,
+    price: number
+  ) {
+    this.menuItems.set(
+      name,
+      new MenuItem(name, description, vegetarian, price)
+    );
+  }
+
+  public createIterator(): Iterator<MenuItem> {
+    return new CafeMenuIterator(this.menuItems);
   }
 }

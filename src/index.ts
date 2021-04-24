@@ -6,7 +6,7 @@
 // import command from './6-command';
 // import adapterFacade from './7-adapter-and-facade';
 // import template from './8-template';
-import iterator from './9-iterator';
+import iteratorComposite from './9-iterator-and-composite';
 
 // Favour composition over inheritance
 // Encapsulate what varies
@@ -15,6 +15,7 @@ import iterator from './9-iterator';
 // Depend on abstractions. Do not deppend on concrete classes
 // Talk only to your friends.
 // Don't call us, we'll call you
+// A class shuld have only one reason to change
 
 // strategy();
 // observer();
@@ -24,4 +25,4 @@ import iterator from './9-iterator';
 // command();
 // adapterFacade();
 // template();
-iterator();
+iteratorComposite();

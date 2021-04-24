@@ -43,3 +43,22 @@ export class PancakeMenuIterator implements Iterator<MenuItem> {
     return result;
   }
 }
+export class CafeMenuIterator implements Iterator<MenuItem> {
+  private items: Map<string, MenuItem>;
+  private position: number = 0;
+
+  constructor(items: Map<string, MenuItem>) {
+    this.items = items;
+  }
+
+  hasNext(): boolean {
+    return this.position < this.items.size;
+  }
+
+  next(): MenuItem {
+    // probably not the best idea ever :D
+    const res = Array.from(this.items)[this.position];
+    this.position++;
+    return res[1];
+  }
+}
