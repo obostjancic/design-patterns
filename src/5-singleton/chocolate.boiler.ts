@@ -5,7 +5,8 @@ export class ChocolateBoiler {
   private static uniqueBoiler: ChocolateBoiler;
 
   // Advantages - Lazy initialization
-  // Disadvantages - Considered an anti pattern in TS
+  // Disadvantages - Considered an anti pattern
+  // TypeScript namespaces can and should be used instead
   private constructor() {
     this.empty = true;
     this.boiled = false;
