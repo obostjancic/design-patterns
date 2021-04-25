@@ -16,7 +16,7 @@ import MVC from './12-mvc';
 // Favour composition over inheritance
 // Encapsulate what varies
 // Program to interfaces, not implementations
-// Strive for loosely coubled designs between objects that interact
+// Strive for loosely coupled designs between objects that interact
 // Depend on abstractions. Do not deppend on concrete classes
 // Talk only to your friends.
 // Don't call us, we'll call you

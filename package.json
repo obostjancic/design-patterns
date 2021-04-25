@@ -1,7 +1,12 @@
 {
   "name": "design-patterns",
   "version": "1.0.0",
-  "main": "index.js",
+  "author": {
+    "name": "Ognjen Bostjancic",
+    "email": "ognjen.bostjancic@gmail.com",
+    "url": "https://ognjenbostjancic.com"
+  },
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "start": "tsc && node dist/index.js"
