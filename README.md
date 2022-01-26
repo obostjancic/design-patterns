@@ -1,6 +1,6 @@
 # Design Patterns
 
-Typescript implementation of examples of design patterns described in the "Head First Design Patterns" by Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra.
+Examples of Typescript implementation of examples of design patterns described in the "Head First Design Patterns" by Eric Freeman, Elisabeth Robson, Bert Bates, and Kathy Sierra.
 
 ## OO design principles
 
